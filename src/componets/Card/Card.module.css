@@ -17,6 +17,9 @@
     padding: 0 1em;
 }
 
+.container h2 {
+    font-size: 1.2rem;
+}
 .favoritar {
     width: 25px;
 }

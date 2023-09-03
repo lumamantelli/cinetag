@@ -2,18 +2,19 @@ import Banner from "componets/Banner"
 import Card from "componets/Card"
 import Titulo from "componets/Titulo"
 import styles from './Inicio.module.css'
-import {  useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 function Inicio() {
     const [videos, setVideos] = useState([])
 
     useEffect(() => {
         fetch('https://my-json-server.typicode.com/lumamantelli/cine-tag/videos')
-        .then(resposta => resposta.json())
-        .then(dados => {
-            setVideos(dados)
-        })
+            .then(resposta => resposta.json())
+            .then(dados => {
+                setVideos(dados)
+            })
     }, [])
+    
     return (
         <>
             <Banner imagem="home"/>
